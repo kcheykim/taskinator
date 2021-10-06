@@ -35,5 +35,16 @@ var taskFormHandler = function(event) {
   createTaskEl(taskDataObj);
 };
 
+var createTaskHandler = function(event) {
+
+  event.preventDefault();
+
+  var listItemEl = document.createElement("li");
+  listItemEl.className = "task-item";
+  listItemEl.textContent = "This is a new task.";
+  tasksToDoEl.appendChild(listItemEl);
+};
+
+
 //buttonEl.addEventListener("click", taskFormHandler);
-formEl.addEventListener("submit", taskFormHandler);
+formEl.addEventListener("submit", createTaskHandler);
